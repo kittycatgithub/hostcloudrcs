@@ -2,6 +2,7 @@ import Link from "next/link";
 import {
   ArrowRight,
   ArrowUpRight,
+  Award,
   BarChart3,
   Check,
   Cloud,
@@ -10,10 +11,12 @@ import {
   ShieldCheck,
   Sparkles,
   Target,
+  TrendingUp,
   Users,
 } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import Image from "next/image";
 
 const services = [
   {
@@ -38,10 +41,31 @@ const services = [
     number: "03",
   },
 ];
-const stats: [string, string][] = [
-  ["4+", "years of combined experience"],
-  ["94%", "client retention rate"],
-  ["3x", "faster average launch"],
+const stats = [
+  {
+    value: "4+",
+    label: "years of experience",
+    icon: Users,
+    text: "text-amber-400",
+    bg: "bg-amber-400/10",
+    ring: "ring-amber-400/20",
+  },
+  {
+    value: "94%",
+    label: "client retention rate",
+    icon: Award,
+    text: "text-rose-400",
+    bg: "bg-rose-400/10",
+    ring: "ring-rose-400/20",
+  },
+  {
+    value: "3x",
+    label: "faster average launch",
+    icon: TrendingUp,
+    text: "text-emerald-400",
+    bg: "bg-emerald-400/10",
+    ring: "ring-emerald-400/20",
+  },
 ];
 
 export default function Home() {
@@ -65,10 +89,10 @@ export default function Home() {
           <div className="hero-orb absolute -right-48 -top-40 h-[620px] w-[620px] rounded-full" />
           <div className="container-shell relative grid min-h-[690px] items-center gap-14 py-20 lg:grid-cols-[1.05fr_.95fr] lg:py-24">
             <div>
-              <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-300/10 px-3 py-2 text-xs font-bold uppercase tracking-[0.15em] text-cyan-200">
+              <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-300/10 px-3 py-2 text-xs font-bold uppercase tracking-[0.15em] text-amber-300">
                 <Sparkles size={14} /> Digital, done differently
               </div>
-              <h1 className="max-w-3xl text-5xl leading-[1.08] tracking-[-0.05em] text-white sm:text-6xl lg:text-7xl">
+              <h1 className="max-w-3xl text-5xl  leading-[1.08] tracking-[-0.05em] text-white sm:text-6xl lg:text-7xl">
                 Build better.
                 <br />
                 <span className="text-cyan-300">Grow faster.</span>
@@ -83,14 +107,14 @@ export default function Home() {
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <Link
                   href="/contact-us"
-                  className="inline-flex items-center justify-center rounded-full bg-cyan-300 px-6 py-4 font-bold text-[#06111e] transition hover:bg-white"
+                  className="inline-flex items-center justify-center rounded-full bg-cyan-300 px-4 py-2 font-bold text-[#06111e] transition hover:bg-white"
                 >
                   Start a conversation{" "}
                   <ArrowUpRight size={18} className="ml-2" />
                 </Link>
                 <Link
                   href="/our-services"
-                  className="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-4 font-bold text-white transition hover:border-cyan-300 hover:text-cyan-300"
+                  className="inline-flex items-center justify-center rounded-full border border-white/15 px-4 py-2 font-bold text-white transition hover:border-cyan-300 hover:text-cyan-300"
                 >
                   Explore our services <ArrowRight size={18} className="ml-2" />
                 </Link>
@@ -99,38 +123,22 @@ export default function Home() {
             <div className="relative mx-auto w-full max-w-[470px] lg:ml-auto">
               <div className="animate-pulse-ring absolute inset-8 rounded-[35%] border border-cyan-300/30" />
               <div className="relative rounded-[2rem] border border-white/15 bg-white/[0.06] p-5 backdrop-blur-sm">
-                <div className="flex items-center justify-between border-b border-white/10 pb-5">
-                  <div>
-                    <p className="text-xs uppercase tracking-[0.18em] text-slate-500">
-                      Growth dashboard
-                    </p>
-                    <p className="mt-1 text-sm font-bold text-white">
-                      Your digital advantage
-                    </p>
-                  </div>
-                  <div className="rounded-full bg-emerald-400/15 px-3 py-1 text-xs font-bold text-emerald-300">
-                    +28.4%
-                  </div>
+                <div className="relative h-64 w-full overflow-hidden rounded-xl">
+                  <Image
+                    src="/images/website-content/hero-image.jpg"
+                    alt="Team reviewing growth analytics"
+                    fill
+                    sizes="(min-width: 1024px) 420px, 90vw"
+                    className="object-cover"
+                  />
                 </div>
-                <div className="mt-7 flex h-48 items-end gap-3 px-3">
-                  {[34, 47, 42, 63, 59, 77, 91].map((height, index) => (
-                    <div
-                      key={height}
-                      className="flex-1 rounded-t-lg bg-gradient-to-t from-cyan-500/20 to-cyan-300"
-                      style={{
-                        height: `${height}%`,
-                        opacity: 0.45 + index * 0.08,
-                      }}
-                    />
-                  ))}
-                </div>
-                <div className="mt-5 grid grid-cols-2 gap-3">
+                <div className="mt-2 grid grid-cols-2 gap-3">
                   <div className="rounded-2xl bg-[#0b1b2d] p-4">
-                    <p className="text-xs text-slate-500">Qualified leads</p>
+                    <p className="text-xs text-white">Qualified leads</p>
                     <p className="mt-2 text-2xl font-bold text-white">2,840</p>
                   </div>
                   <div className="rounded-2xl bg-[#0b1b2d] p-4">
-                    <p className="text-xs text-slate-500">Launch velocity</p>
+                    <p className="text-xs text-white">Launch velocity</p>
                     <p className="mt-2 text-2xl font-bold text-cyan-300">
                       3.2x
                     </p>
@@ -159,17 +167,24 @@ export default function Home() {
             }}
           />
         </section>
-        <section className="border-b border-white/10 py-8">
-          <div className="container-shell grid gap-5 sm:grid-cols-3">
-            {stats.map(([value, label]) => (
+        <section className="border-b border-white/10 py-3">
+          <div className="container-shell grid gap-6 sm:grid-cols-3">
+            {stats.map(({ value, label, icon: Icon, text, bg, ring }) => (
               <div
                 key={label}
                 className="flex items-center gap-4 sm:justify-center sm:border-l sm:border-white/10 first:sm:border-0"
               >
-                <p className="text-3xl font-bold text-cyan-300">{value}</p>
-                <p className="max-w-[150px] text-sm leading-5 text-slate-400">
-                  {label}
-                </p>
+                <div
+                  className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${bg} ring-1 ${ring}`}
+                >
+                  <Icon className={`h-6 w-6 ${text}`} strokeWidth={2} />
+                </div>
+                <div>
+                  <p className={`text-2xl font-bold ${text}`}>{value}</p>
+                  <p className="max-w-[150px] text-sm leading-5 text-white">
+                    {label}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
