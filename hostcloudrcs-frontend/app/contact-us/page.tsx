@@ -23,12 +23,12 @@ export default function ContactPage() {
         <section className="relative overflow-hidden border-b border-white/10 py-24 lg:py-32">
           <div className="hero-orb absolute -right-32 -top-40 h-[550px] w-[550px] rounded-full" />
           <div className="container-shell relative">
-            <p className="eyebrow">Contact HostCloudRCS</p>
-            <h1 className="mt-5 max-w-4xl text-5xl font-bold leading-[1.08] tracking-[-0.05em] text-white sm:text-6xl">
+            <p className="eyebrow">Contact HostCloud RCS</p>
+            <h1 className="mt-5 max-w-4xl text-5xl leading-[1.08] tracking-[-0.05em] text-white sm:text-6xl">
               Good work starts with a{" "}
               <span className="text-cyan-300">good conversation.</span>
             </h1>
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-300">
+            <p className="mt-7 max-w-2xl text-lg leading-8 text-white">
               Share a little about your goals, and we&apos;ll come prepared with
               useful questions and a clear point of view.
             </p>
@@ -52,7 +52,7 @@ export default function ContactPage() {
                     ["Email us", "hostcloudrcs@gmail.com", Mail],
                     [
                       "Talk to support team",
-                      "We reply within one business day",
+                      "+91 9960839561",
                       MessageCircle,
                     ],
                     ["Working hours", "Monday to Friday, 9 AM – 6 PM", Clock3],
@@ -62,9 +62,9 @@ export default function ContactPage() {
                     <div className="rounded-xl bg-cyan-300/10 p-3 text-cyan-300">
                       <Icon size={19} />
                     </div>
-                    <div>
-                      <p className="text-sm font-bold text-white">{label}</p>
-                      <p className="mt-1 text-sm text-slate-400">{text}</p>
+                    <div className="text-white">
+                      <p className="text-sm font-bold">{label}</p>
+                      <p className="mt-1 text-sm">{text}</p>
                     </div>
                   </div>
                 ))}

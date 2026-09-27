@@ -39,7 +39,7 @@ const services = [
   },
 ];
 const stats: [string, string][] = [
-  ["12+", "years of combined experience"],
+  ["4+", "years of combined experience"],
   ["94%", "client retention rate"],
   ["3x", "faster average launch"],
 ];
@@ -68,7 +68,7 @@ export default function Home() {
               <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-300/10 px-3 py-2 text-xs font-bold uppercase tracking-[0.15em] text-cyan-200">
                 <Sparkles size={14} /> Digital, done differently
               </div>
-              <h1 className="max-w-3xl text-5xl font-bold leading-[1.08] tracking-[-0.05em] text-white sm:text-6xl lg:text-7xl">
+              <h1 className="max-w-3xl text-5xl leading-[1.08] tracking-[-0.05em] text-white sm:text-6xl lg:text-7xl">
                 Build better.
                 <br />
                 <span className="text-cyan-300">Grow faster.</span>
@@ -76,7 +76,7 @@ export default function Home() {
                 Operate smarter.
               </h1>
               <p className="mt-7 max-w-xl text-lg leading-8 text-slate-300">
-                Host Cloud brings technology, marketing, and marketplace
+                HostCloud RCS brings technology, marketing, and marketplace
                 expertise together so your business can move from good
                 intentions to meaningful momentum.
               </p>

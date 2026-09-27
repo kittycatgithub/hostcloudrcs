@@ -6,15 +6,13 @@ export function SiteFooter() {
     <footer className="border-t border-white/10 bg-[#06111e] pt-16">
       <div className="container-shell grid gap-12 pb-14 md:grid-cols-[1.5fr_1fr_1fr]">
         <div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-left gap-3">
             <img
-              src="/images/rcs.jpg"
+              src="/images/logo.jpeg"
               alt="Host Cloud"
-              className="h-12 w-12 rounded-lg object-cover"
+              // className="h-16 w-full rounded-lg object-contain"
+              className="h-16 rounded-lg object-contain"
             />
-            <span className="text-sm font-bold uppercase tracking-[0.25em]">
-              Host Cloud
-            </span>
           </div>
           <p className="mt-5 max-w-sm text-sm leading-7 text-slate-400">
             The digital operations partner for businesses ready to build, grow,
