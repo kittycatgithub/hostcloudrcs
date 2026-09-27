@@ -1,0 +1,35 @@
+# Environment variables
+.env
+.env.*
+**/.env
+**/.env.*
+
+# Allow example environment files
+!.env.example
+!**/.env.example
+
+# Frontend (Next.js)
+hostcloudrcs-frontend/.next/
+hostcloudrcs-frontend/out/
+hostcloudrcs-frontend/node_modules/
+hostcloudrcs-frontend/.vercel/
+
+# Backend (Express.js)
+backend/node_modules/
+backend/dist/
+backend/coverage/
+
+# General
+node_modules/
+dist/
+coverage/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
