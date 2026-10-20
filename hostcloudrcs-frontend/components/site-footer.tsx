@@ -8,13 +8,14 @@ export function SiteFooter() {
         <div>
           <div className="flex items-left gap-3">
             <img
-              src="/images/logo.jpeg"
+              // src="/images/logo.jpeg"
+              src="/images/rcs.jpg"
               alt="Host Cloud"
               // className="h-16 w-full rounded-lg object-contain"
-              className="h-16 rounded-lg object-contain"
+              className="h-28 rounded-lg object-contain"
             />
           </div>
-          <p className="mt-5 max-w-sm text-sm leading-7 text-slate-400">
+          <p className="mt-5 max-w-sm text-sm leading-7 text-white">
             The digital operations partner for businesses ready to build, grow,
             and operate with confidence.
           </p>
@@ -38,7 +39,7 @@ export function SiteFooter() {
         </div>
         <div>
           <h3 className="text-sm font-bold text-white">Explore</h3>
-          <div className="mt-5 grid gap-3 text-sm text-slate-400">
+          <div className="mt-5 grid gap-3 text-sm text-white">
             <Link href="/about" className="hover:text-cyan-300">
               About us
             </Link>
@@ -55,7 +56,7 @@ export function SiteFooter() {
         </div>
         <div>
           <h3 className="text-sm font-bold text-white">Start a conversation</h3>
-          <p className="mt-5 flex items-start gap-2 text-sm leading-6 text-slate-400">
+          <p className="mt-5 flex items-start gap-2 text-sm leading-6 text-white">
             <MapPin size={17} className="mt-1 shrink-0 text-cyan-300" />
             Working with ambitious teams worldwide
           </p>
@@ -68,7 +69,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-white/10 py-6">
-        <div className="container-shell flex flex-col gap-2 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+        <div className="container-shell flex flex-col gap-2 text-xs text-white sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} HostCloudRCS. All rights reserved.</p>
           <p>Built for the next stage of your growth.</p>
         </div>

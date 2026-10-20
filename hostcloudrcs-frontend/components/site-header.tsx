@@ -18,22 +18,23 @@ export function SiteHeader() {
     <header className="relative z-50 border-b border-white/10 bg-[#06111e]/90 backdrop-blur-xl">
       <div className="container-shell flex h-[76px] items-center justify-between gap-6">
         <Link href="/" className="flex items-center gap-3" aria-label="Host Cloud home">
-          <img src="/images/logo.jpeg" alt="Host Cloud" className="h-16 w-auto rounded-lg object-contain pb-2" />
+          {/* <img src="/images/logo.jpeg" alt="Host Cloud" className="h-16 w-auto rounded-lg object-contain pb-2" /> */}
+          <img src="/images/rcs.jpg" alt="Host Cloud" className="h-20 w-auto rounded-lg object-contain pb-2" />
           {/* <span className="hidden text-[0.72rem] font-bold uppercase tracking-[0.25em] text-white sm:block">Host Cloud</span> */}
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Main navigation">
-          <Link className="text-sm text-slate-300 transition hover:text-cyan-300" href="/">Home</Link>
-          <Link className="text-sm text-slate-300 transition hover:text-cyan-300" href="/about">About us</Link>
+          <Link className="text-md text-white transition hover:text-cyan-300" href="/">Home</Link>
+          <Link className="text-md text-white transition hover:text-cyan-300" href="/about">About us</Link>
           <div className="relative" onMouseEnter={() => setServicesOpen(true)} onMouseLeave={() => setServicesOpen(false)}>
-            <button type="button" onClick={() => setServicesOpen(!servicesOpen)} className="flex items-center gap-1.5 text-sm text-slate-300 transition hover:text-cyan-300" aria-expanded={servicesOpen}>
+            <button type="button" onClick={() => setServicesOpen(!servicesOpen)} className="flex items-center gap-1.5 text-md text-white transition hover:text-cyan-300" aria-expanded={servicesOpen}>
               Services <ChevronDown size={15} className={servicesOpen ? 'rotate-180 transition' : 'transition'} />
             </button>
             <div className={`absolute left-1/2 top-full mt-4 w-72 -translate-x-1/2 rounded-2xl border border-white/10 bg-[#102940] p-2 shadow-2xl transition duration-200 ${servicesOpen ? 'visible translate-y-0 opacity-100' : 'invisible -translate-y-2 opacity-0'}`}>
-              {serviceLinks.map((service) => <Link key={service.href} href={service.href} className="group flex items-center justify-between rounded-xl px-4 py-3 text-sm text-slate-200 transition hover:bg-white/10 hover:text-cyan-300"><span>{service.label}</span><ArrowUpRight size={15} className="opacity-0 transition group-hover:opacity-100" /></Link>)}
+              {serviceLinks.map((service) => <Link key={service.href} href={service.href} className="group flex items-center justify-between rounded-xl px-4 py-3 text-sm text-white transition hover:bg-white/10 hover:text-cyan-300"><span>{service.label}</span><ArrowUpRight size={15} className="opacity-0 transition group-hover:opacity-100" /></Link>)}
             </div>
           </div>
-          <Link className="text-sm text-slate-300 transition hover:text-cyan-300" href="/why-choose-us">Why choose us</Link>
+          <Link className="text-md text-white transition hover:text-cyan-300" href="/why-choose-us">Why choose us</Link>
         </nav>
 
         <Link href="/contact-us" className="hidden rounded-full bg-cyan-300 px-5 py-3 text-sm font-bold text-[#06111e] transition hover:bg-white md:inline-flex">Let&apos;s talk <ArrowUpRight size={17} className="ml-2" /></Link>
